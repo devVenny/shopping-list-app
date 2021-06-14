@@ -25,34 +25,53 @@ body{
 
 /* input-box */
 
-.input-box{
+.addList{
+    position: absolute;
+    bottom: 0;
     background-color: peachpuff;
-    width:100%;
-    position:absolute;
-    bottom:0;
     display:flex;
+    justify-content: space-between;
     align-items: center;
-  padding:20px 0px;
-}
-
-.input-box .form{
-    width:90%;
-    margin:0px 5px;
-}
-
-.input-box i {
-    width:10%;
-    margin-left:5px;
-    text-align: center;
-}
-
-.input-box .form .input{
     width:100%;
-    padding:10px;
-    border-radius: 20px;
-    border:0px;
+    padding:15px 20px;
 }
 
-.input-box .form .input:focus{
+.addList .addList-column:first-child,
+.addList .addList-column:last-child,
+.addList .addList-column input{
+    transition: all .3s linear;
+}
+
+.addList .addList-column:first-child{
+    width:10%;
+}
+
+.addList .addList-column:last-child{
+    width:90%;
+}
+
+.addList .addList-column:last-child .submitBtn{
+    all:unset;
+   position:absolute;
+   right:23px;
+   bottom:17px;
+   cursor:pointer;
+   border-radius: 50%;
+}
+
+.addList .addList-column:last-child input{
+    width:100%;
+    padding:10px 15px;
+    border-radius: 20px;
+}
+
+.addList .addList-column:last-child input:focus{
     outline: none;
+    width:95vw;
+    transform: translateX(-48px);
+}
+
+.addList:focus-within .addList-column:first-child,
+.addList:focus-within .addList-column:last-child .submitBtn{
+    opacity: 0;
 }

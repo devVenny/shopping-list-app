@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <Script defer src="javascript.js"></Script> 
 </head>
 <body>
     <header class="header">
@@ -17,13 +18,18 @@
         <ul class="list"></ul>
     </section>
 
-    <section class="input-box">
+<form class="addList">
+    <div class="addList-column">
         <i class="far fa-plus-square fa-2x"></i>
-    <form class="form" method="POST">
-        <input class="input" type="type" placeholder="write what you want to buy">
-    </form>
+    </div>
 
-    </section>
+    <div class="addList-column">
+        <input type="text" placeholder="write what you want to buy">
+        <button class="submitBtn">
+        <i class="far fa-arrow-alt-circle-up fa-2x"></i>
+    </button>
+    </div>
+</form>
     
 </body>
 </html>
