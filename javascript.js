@@ -7,7 +7,17 @@ const ul = document.querySelector(".list");
 const LIST_KEY = "LIST";
 const LIST_ARRAY = [];
 
-// add a item
+// add & reaove a item-list
+
+function deleteList(e){
+    const li = e.target.parentNode;
+    ul.removeChild(li)
+
+    const cleanList = LIST_ARRAY.filter(() => {
+        return li.id !== 1;
+    });
+    console.log(cleanList);
+}
 
 function saveList(obj){
     localStorage.setItem(LIST_KEY, JSON.stringify(obj));
@@ -19,14 +29,14 @@ function paintList(text){
     const delBtn = document.createElement("button");
     
     span.textContent=text;
-    delBtn.textContent="🚫";
+    delBtn.textContent="O";
     li.id=LIST_ARRAY.length;
     li.append(span);
     li.append(delBtn);
     ul.append(li);
 
+    delBtn.addEventListener('click', deleteList);
     
-
     const newObj = {
         text : text,
         id :LIST_ARRAY.length 
