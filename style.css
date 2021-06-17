@@ -7,7 +7,7 @@ body{
     margin:0;
     height: 100vh;
     width:100%;
-    background:no-repeat url(/image/space.webp);
+    background:no-repeat url(./image/space.webp);
     background-size: cover;
 }
 
@@ -19,7 +19,7 @@ li{
     width:400px;
     height: 95vh;
     margin:10px auto;
-    background:no-repeat url(/image/black\ screen.jpeg);
+    background:no-repeat url(./image/black\ screen.jpeg);
     background-size: cover;
     border-radius: 20px;
     position:relative;
